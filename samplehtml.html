@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Enhanced Sample HTML Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
         }
         header, footer {
-            background-color: #f8f8f8;
+            background-color: #333;
+            color: #fff;
             padding: 10px;
             text-align: center;
         }
@@ -21,10 +25,17 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: #007BFF;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         main {
             margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         section {
             margin-bottom: 20px;
@@ -32,38 +43,78 @@
         h1, h2 {
             color: #555;
         }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome to My Enhanced Website</h1>
     </header>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <main>
         <section id="home">
             <h2>Home</h2>
-            <p>This is the homepage of the sample website. Here you can find some basic information.</p>
+            <p>This is the homepage of the enhanced sample website. Here you can find a variety of content including images, lists, and forms.</p>
+            <ul>
+                <li>Introduction to the website</li>
+                <li>Information about the content</li>
+                <li>How to get in touch</li>
+            </ul>
         </section>
 
         <section id="about">
             <h2>About</h2>
-            <p>This section contains information about the website and its purpose.</p>
+            <p>This section contains information about the website and its purpose. The aim is to provide visitors with useful content and a pleasant browsing experience.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Below is an image that represents our website's theme:</p>
+            <img src="https://via.placeholder.com/600x400" alt="Sample Image">
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>If you have any questions, feel free to reach out!</p>
-        </section>
-    </main>
+            <p>If you have any questions, feel free to reach out by filling out the form below:</p>
+            <form action="/submit-form" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="e
